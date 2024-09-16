@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 $base-font-family: Times, serif !default;
+$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $base-line-height: 1.5 !default;
@@ -15,8 +16,14 @@ $on-medium:        $on-palm !default;
 $on-large:         $on-laptop !default;
 
 
+
+
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+%vertical-rhythm {
+  margin-bottom: $spacing-unit * .5;
 }
 
 /* Basic styling for the header */
@@ -122,3 +129,42 @@ body {
     }
   }
 }
+
+/**
+ * Code formatting
+ */
+ pre,
+ code {
+   font-family: $code-font-family;
+   font-size: 0.9375em;
+   border-radius: 3px;
+   color: #FFF;
+   background-color: #000;
+ }
+ 
+ code {
+   padding: 1px 5px;
+ }
+ 
+ pre {
+   padding: 8px 12px;
+   overflow-x: auto;
+ 
+   > code {
+     border: 0;
+     padding-right: 0;
+     padding-left: 0;
+   }
+ }
+ 
+ .highlight {
+   border-radius: 3px;
+   background: #000;
+   @extend %vertical-rhythm;
+ 
+   .highlighter-rouge & {
+     background: #000;
+   }
+ }
+ 
+ @import '_solarized'
