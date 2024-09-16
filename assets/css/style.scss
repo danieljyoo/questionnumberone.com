@@ -1,0 +1,29 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+$base-font-family: Times, serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+$content-width:    650px !default;
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+/* Basic styling for the header */
+.site-header {
+  padding: 1em 0; /* Add some padding for spacing */
+}
+
+  /* Centering content inside the wrapper */
+.wrapper {
+  width: 90%;
+  max-width: $content_width;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aligns site title and nav */
+}
+  
