@@ -28,6 +28,9 @@ url: "https://questionnumberone.com" # the base hostname & protocol for your sit
 # twitter_username: jekyllrb
 github_username:  danieljyoo
 
+# customer
+show_excerpts: true
+
 # Build settings
 # theme: minima
 plugins:
